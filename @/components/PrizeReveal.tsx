@@ -164,7 +164,7 @@ export default function PrizeReveal({
         >
           {prizeImage && (
             <div className="flex justify-end">
-              <img
+              <Image
                 alt={getPrizeReward(
                   getCurrentPrize(prizeIndex, prizes),
                   prizes
