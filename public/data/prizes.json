@@ -1,0 +1,14 @@
+{
+  "1": {
+    "count": 1,
+    "reward": "Grand Prize"
+  },
+  "2": {
+    "count": 2,
+    "reward": "Runner-up Prize"
+  },
+  "3": {
+    "count": 3,
+    "reward": "Gift Card"
+  }
+}
