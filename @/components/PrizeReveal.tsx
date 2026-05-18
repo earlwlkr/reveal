@@ -98,7 +98,7 @@ export default function PrizeReveal({
 
   return (
     <>
-      <div className="flex flex-col gap-y-4 w-full justify-center items-center">
+      <div className="flex w-full flex-col items-center justify-center gap-y-8">
         <div className="flex gap-x-4">
           <Button
             disabled={running || !(remaining?.length > 0 && prizeIndex > 0)}
@@ -158,12 +158,14 @@ export default function PrizeReveal({
         </div>
         <div
           className={cn(
-            'w-full gap-6',
-            prizeImage ? 'grid grid-cols-2' : 'flex justify-center'
+            'w-full items-center gap-8',
+            prizeImage
+              ? 'grid grid-cols-1 lg:grid-cols-[minmax(260px,420px)_minmax(0,1fr)]'
+              : 'flex justify-center'
           )}
         >
           {prizeImage && (
-            <div className="flex justify-end">
+            <div className="flex justify-center lg:justify-end">
               <Image
                 alt={getPrizeReward(
                   getCurrentPrize(prizeIndex, prizes),
@@ -172,17 +174,19 @@ export default function PrizeReveal({
                 src={prizeImage}
                 width={400}
                 height={400}
+                priority
+                className="h-auto w-full max-w-[320px] rounded-lg object-contain drop-shadow-2xl sm:max-w-[380px] lg:max-w-[420px]"
               />
             </div>
           )}
 
           <div
             className={cn(
-              'flex flex-col text-left w-4xl mt-[100px]',
-              !prizeImage && 'text-center'
+              'flex min-h-[180px] w-full max-w-3xl flex-col justify-center text-center lg:text-left',
+              !prizeImage && 'items-center text-center'
             )}
           >
-            <div className="text-4xl mb-2">
+            <div className="mb-4 text-3xl font-semibold tracking-wide sm:text-4xl">
               {getPrizeReward(getCurrentPrize(prizeIndex, prizes), prizes)}
             </div>
             {selected ? (

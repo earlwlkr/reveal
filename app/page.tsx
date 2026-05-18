@@ -19,9 +19,9 @@ export default async function Home() {
   const [items, prizes] = await getData();
 
   return (
-    <div className="main h-screen overflow-hidden text-white">
-      <main className="flex flex-col justify-center items-center px-4 py-40 gap-y-8">
-        <h1 className="text-6xl font-bold">
+    <div className="main min-h-screen overflow-hidden text-white">
+      <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center gap-y-10 px-6 py-16">
+        <h1 className="text-center text-5xl font-bold sm:text-6xl">
           Lucky <span className="">Draw</span>
         </h1>
 

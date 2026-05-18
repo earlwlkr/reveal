@@ -1,14 +1,17 @@
 {
   "1": {
     "count": 1,
-    "reward": "Grand Prize"
+    "reward": "Grand Prize",
+    "image": "/images/grand-prize.png"
   },
   "2": {
     "count": 2,
-    "reward": "Runner-up Prize"
+    "reward": "Runner-up Prize",
+    "image": "/images/runner-up-prize.png"
   },
   "3": {
     "count": 3,
-    "reward": "Gift Card"
+    "reward": "Gift Card",
+    "image": "/images/gift-card-prize.png"
   }
 }

@@ -25,8 +25,8 @@ export default function Reveal({ selected, duration, onComplete }) {
 
   return (
     <div className="font-bold">
-      <div className="text-5xl">
-        <div className="relative left-32">
+      <div className="text-4xl sm:text-5xl">
+        <div className="relative left-1/2">
           <Confetti active={showName} config={confettiConfig} />
         </div>
         <RandomReveal
